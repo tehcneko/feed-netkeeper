@@ -22,7 +22,7 @@ end
 iface.optional = false
 iface.rmempty = false
 
-last_authreq = s:option(TextValue, "last_authreq", translate("Last AuthReq"),translate("Last PPPoE Server Auth Request (Live Update)"))
+last_authreq = s:option(TextValue, "last_authreq", translate("Last auth request"),translate("Last PPPoE Server Auth Request (Live Update)"))
 last_authreq.template = "netkeeper-interception/netkeeper-interception_authreq"
 
 return m

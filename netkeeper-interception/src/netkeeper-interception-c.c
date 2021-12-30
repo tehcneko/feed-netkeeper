@@ -11,17 +11,13 @@ static unsigned char savepwd[MAXSECRETLEN] = {0};
 
 int pap_modifyaccount()
 {
-	u_int8_t len_user;
-	u_int8_t len_passwd;
-	FILE *dF = fopen ("/var/Last_AuthReq", "r");
+	FILE *dF = fopen ("/etc/netkeeper-interception/last-auth-request", "r");
 	if(dF){
-		fread(&len_user,1,1,dF);
-		fread(&saveuser,1,len_user,dF);
-		fread(&len_passwd,1,1,dF);
-		fread(&savepwd,1,len_passwd,dF);
-		fflush(dF);
+		fscanf(dF, "%s %s", &saveuser, &savepwd);
+		fclose(dF);
+	} else {
+		exit(1);
 	}
-	fclose(dF);
 	dF=NULL;
 	strcpy(user, saveuser);
 	strcpy(passwd, savepwd);

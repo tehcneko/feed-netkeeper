@@ -30,9 +30,8 @@ end
 
 function act_authreq()
 	local e={}
-	if nixio.fs.access("/var/Last_AuthReq") then
-		local r=nixio.fs.readfile("/var/Last_AuthReq")
-		r=string.tohex(r)
+	if nixio.fs.access("/etc/netkeeper-interception/last-auth-request") then
+		local r=nixio.fs.readfile("/etc/netkeeper-interception/last-auth-request")
 		e.authreq=r
 	else
 		e.authreq=""

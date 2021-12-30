@@ -18,8 +18,8 @@ msgstr "指定监听的LAN接口"
 msgid "Specifies the Lan Interface that needs to be Listen by The PPPoE Server"
 msgstr "指定用于PPPoE服务器监听的LAN接口，用于拦截闪讯客户端账户"
 
-msgid "Last AuthReq"
-msgstr "Last AuthReq"
+msgid "Last auth request"
+msgstr "最后认证请求"
 
 msgid "Last PPPoE Server Auth Request (Live Update)"
 msgstr "PPPoE服务器收到的最后一次账户认证请求（实时更新）"
